@@ -1,0 +1,42 @@
+{
+  "name": "Rumble #53",
+  "symbol": "RMBL",
+  "description": "Rumble NFT is battle suppported NFT Project",
+  "seller_fee_basis_points": 1000,
+  "image": "53.png",
+  "external_url": "https://Rumblenfts.com",
+  "edition": 53,
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "common"
+    },
+    {
+      "trait_type": "Type",
+      "value": "earth"
+    },
+    {
+      "trait_type": "Power",
+      "value": "6193"
+    },
+    {
+      "trait_type": "Status",
+      "value": "In-Combet"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "53.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "35FX8hqpMHmcbT5R1Ye1ze6ZiJoeZMwJHTnwdYYZzhZY",
+        "share": 100
+      }
+    ]
+  }
+}

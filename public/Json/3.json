@@ -1,0 +1,42 @@
+{
+  "name": "Rumble #3",
+  "symbol": "RMBL",
+  "description": "Rumble NFT is battle suppported NFT Project",
+  "seller_fee_basis_points": 1000,
+  "image": "3.png",
+  "external_url": "https://Rumblenfts.com",
+  "edition": 3,
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "common"
+    },
+    {
+      "trait_type": "Type",
+      "value": "water"
+    },
+    {
+      "trait_type": "Power",
+      "value": "6500"
+    },
+    {
+      "trait_type": "Status",
+      "value": "In-Combet"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "35FX8hqpMHmcbT5R1Ye1ze6ZiJoeZMwJHTnwdYYZzhZY",
+        "share": 100
+      }
+    ]
+  }
+}
