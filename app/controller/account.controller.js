@@ -19,32 +19,27 @@ async function readingDirectory(directory) {
     for (const tokenAddress of p) {
       // console.log(d);
       const endpoint = `https://public-api.solscan.io/token/meta?tokenAddress=${tokenAddress}`;
-
       axios
         .get(endpoint)
         .then(async (response) => {
           // console.log(response.data);
-          const data = response.data;
-          const check = await singleTrnNft.find({ name: data.name });
-          if (check) return;
+          const _data = [response.data];
+          // console.log("🚀 ~ .then ~ _data", _data)
+          for (const data of _data) {
+            const check = await singleTrnNft.findOne({ name: data.name });
+            // console.log("🚀 ~ .then ~ check", check);
+            if (check) continue;
 
-          // console.log("🚀 ~ file: main.js ~ line 27 ~ .then ~ data", data.name);
-          // data.push({
-          //   tokenAddress
-          // })
-          // const i = singleTrnNft(data);
-          // console.log(d);
-
-          singleTrnNft({
-            name: data.name,
-            symbol: data.symbol,
-            decimals: data.decimals,
-            tokenAuthority: data.tokenAuthority,
-            supply: data.supply,
-            type: data.type,
-            tokenAddress,
-          }).save();
-          // console.log(data);
+            await singleTrnNft({
+              name: data.name,
+              symbol: data.symbol,
+              decimals: data.decimals,
+              tokenAuthority: data.tokenAuthority,
+              supply: data.supply,
+              type: data.type,
+              tokenAddress,
+            }).save();
+          }
         })
         .catch((error) => {
           console.log(error);
