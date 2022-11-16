@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const chartController = require("../controller/chart.controller");
 const battelNft = require("../controller/battel.controller");
-const accNft  = require("../controller/account.controller")
+// const accNft  = require("../controller/account.controller")
 
 // router.post('/rumble', chartController.rumbleElements)
 router.post("/rumbleNfts", chartController.rumbleNfts);
@@ -24,6 +24,6 @@ router.post("/login", battelNft.loginUser);
 router.post("/time", battelNft.nfttime);
 
 // accunot api
-router.post("/account", accNft.accountNft);
+// router.post("/account", accNft.accountNft);
 
 module.exports = router;

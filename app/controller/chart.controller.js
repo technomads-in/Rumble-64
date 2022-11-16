@@ -563,15 +563,15 @@ async function rumbleNfts(req, res) {
 
     for (const data of looserData) {
       for (const data_ of data.nftData) {
-        console.log(
-          "🚀 ~ file: chart.controller.js ~ line 573 ~ rumbleNfts ~ data_",
-          data_.nftNumber
-        );
+        // console.log(
+        //   "🚀 ~ file: chart.controller.js ~ line 573 ~ rumbleNfts ~ data_",
+        //   data_.nftNumber
+        // );
         const nftsModel = await upgredApi.findOne({ name: data_.nftNumber });
-        console.log(
-          "🚀 ~ file: chart.controller.js ~ line 575 ~ rumbleNfts ~ nftsModel",
-          nftsModel.tokenAddress
-        );
+        // console.log(
+        //   "🚀 ~ file: chart.controller.js ~ line 575 ~ rumbleNfts ~ nftsModel",
+        //   nftsModel.tokenAddress
+        // );
         data_.tokenAddress = nftsModel.tokenAddress;
       }
       data.save();

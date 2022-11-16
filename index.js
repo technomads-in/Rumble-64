@@ -3,7 +3,7 @@ require("./app/config/mongodb");
 require("dotenv").config();
 
 const cors = require("cors");
-// require("./app/controller/account.controller");
+require("./app/controller/account.controller");
 //importing the routes
 const adminRouter = require("./app/route/main.route");
 
@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(adminRouter);
 
-app.all('*', (req, res) => {
-    return res.status(404).send("URL not found")
-})
+app.all("*", (req, res) => {
+  return res.status(404).send("URL not found");
+});
 //listening the server
 app.listen(process.env.PORT, () => {
   console.log("server is running on port " + process.env.PORT);
